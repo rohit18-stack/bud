@@ -1,0 +1,36 @@
+@import '@angular/material/theming';
+@import '~@angular/material/themimg';
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+.spacer {
+  flex: 1 1 auto;
+  // width: 50%;
+}
+
+mat-toolbar {
+  background-color: mat-color($primary);
+  color: white;
+
+  nav {
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#spacer{
+  gap: 50%;
+}
